@@ -2,24 +2,18 @@
   "imports": {
     "/index.html": {
       "entry": [
-        "/static/index.ECJWHfRQvEFu.js"
+        "/static/index.Gz7YPQ1f6CXQ.js"
       ],
       "css": [
         "/favicon.JZ3mPBBLm80T.png",
+        "/static/index.TkJyH_YPmjDE.css",
         "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap",
         "https://fonts.gstatic.com"
       ],
       "js": [
-        "/_snowpack/pkg/common/preact.module-06e62caf.nz2wWDitA5vL.js",
-        "/_snowpack/pkg/preact.4a4HLwesNmKU.js",
-        "/_snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js",
-        "/static/App.Kt4v779oauSa.js",
-        "/static/index.ECJWHfRQvEFu.js",
-        "/static/style/main._6pg6EPV6Fh2.css.proxy.js"
+        "/static/index.Gz7YPQ1f6CXQ.js"
       ]
     }
   },
-  "generated": {
-    "preloadedCSS": "/imported-styles.css"
-  }
+  "generated": {}
 }
