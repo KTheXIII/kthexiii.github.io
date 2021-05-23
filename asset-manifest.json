@@ -1,6 +1,13 @@
 {
   "index.html": "index.html",
-  "static/index.css": "static/index.TkJyH_YPmjDE.css",
-  "static/index.js": "static/index.Gz7YPQ1f6CXQ.js",
-  "favicon.png": "favicon.JZ3mPBBLm80T.png"
+  "_snowpack/pkg/preact.js": "_snowpack/pkg/preact.4a4HLwesNmKU.js",
+  "_snowpack/pkg/common/preact.module-06e62caf.js": "_snowpack/pkg/common/preact.module-06e62caf.nz2wWDitA5vL.js",
+  "_snowpack/pkg/preact/devtools.js": "_snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js",
+  "static/App.js": "static/App.Kt4v779oauSa.js",
+  "static/index.js": "static/index.ECJWHfRQvEFu.js",
+  "static/style/main.css": "static/style/main._6pg6EPV6Fh2.css",
+  "static/style/main.css.proxy.js": "static/style/main._6pg6EPV6Fh2.css.proxy.js",
+  "favicon.png": "favicon.JZ3mPBBLm80T.png",
+  "preact": "_snowpack/pkg/preact.4a4HLwesNmKU.js",
+  "preact/devtools": "_snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js"
 }
