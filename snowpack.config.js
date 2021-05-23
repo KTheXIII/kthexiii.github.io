@@ -26,7 +26,7 @@ module.exports = {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    "bundle": process.env.GITHUB_IO ? true : false
+    // "bundle": process.env.GITHUB_IO || false
   },
   packageOptions: {
     /* ... */
@@ -36,6 +36,6 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    metaUrlPath: 'snowpack' // change _snowpack directory to snowpack
   },
 };

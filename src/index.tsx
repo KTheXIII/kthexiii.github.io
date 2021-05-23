@@ -1,5 +1,6 @@
 import 'preact/devtools'
 import { render, h } from 'preact'
+
 import './style/main.scss'
 
 import { App } from './App'
