@@ -27,7 +27,6 @@
     "@types/chai": "^4.2.17",
     "@types/mocha": "^8.2.2",
     "@types/three": "^0.127.1",
-    "@web/test-runner": "^0.13.3",
     "chai": "^4.3.4",
     "postcss-import": "^14.0.1",
     "sass": "^1.34.0",
