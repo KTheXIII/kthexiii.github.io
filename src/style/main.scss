@@ -18,7 +18,6 @@ body,
   margin: 0;
   height: 100%;
   overflow: hidden;
-  font-weight: 300;
   background-color: var(--bg);
   color: var(--text-color);
 }
@@ -28,6 +27,18 @@ body,
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.app h1 {
+  font-weight: 300;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.animation-500ms-ease-in {
+  transition: all 500ms ease-in;
 }
 
 @media (prefers-color-scheme: light) {
