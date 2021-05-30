@@ -2,7 +2,7 @@
   "imports": {
     "/index.html": {
       "entry": [
-        "/static/index.eorJqLL9oNtt.js"
+        "/static/index.TEP-oeEFA_S0.js"
       ],
       "css": [
         "/favicon.JZ3mPBBLm80T.png",
@@ -13,9 +13,10 @@
         "/snowpack/pkg/common/preact.module-06e62caf.nz2wWDitA5vL.js",
         "/snowpack/pkg/preact.4a4HLwesNmKU.js",
         "/snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js",
-        "/static/App.3w2f6a-Dmx1R.js",
-        "/static/index.eorJqLL9oNtt.js",
-        "/static/style/main._6pg6EPV6Fh2.css.proxy.js"
+        "/snowpack/pkg/preact/hooks.mhyMt11YgrXZ.js",
+        "/static/App.cTgAnewST9QB.js",
+        "/static/index.TEP-oeEFA_S0.js",
+        "/static/style/main.nE4_niQwEq4g.css.proxy.js"
       ]
     }
   },
