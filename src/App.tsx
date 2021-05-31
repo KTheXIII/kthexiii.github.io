@@ -9,7 +9,7 @@ export const App: FunctionalComponent = () => {
     if(!timeoutID)
       timeoutID = setTimeout(() => {
         helloRef.current?.classList.remove('invisible')
-        helloRef.current?.classList.add('animation-500ms-ease-in')
+        helloRef.current?.classList.add('animation-500ms-ease-out')
       }, 250);
   }, [helloRef])
 
