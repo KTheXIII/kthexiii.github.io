@@ -1,1 +1,0 @@
-import"../snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js";import{render as r,h as n}from"../snowpack/pkg/preact.4a4HLwesNmKU.js";import{App as p}from"./App.cTgAnewST9QB.js";async function t(){const o=document.querySelector("#root");o&&r(n(p,null),o)}window.onload=t;
