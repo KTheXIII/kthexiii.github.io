@@ -11,7 +11,7 @@ Build with Snowpack, Preact and TypeScript.
 Installs the packages
 
 ```
-yarn i
+yarn
 ```
 
 Run development server
