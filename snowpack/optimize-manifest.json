@@ -13,13 +13,13 @@
         "https://fonts.gstatic.com"
       ],
       "js": [
-        "/snowpack/pkg/common/preact.module-b61d5fee.js",
+        "/snowpack/pkg/common/preact.module-a71fe08d.js",
         "/snowpack/pkg/preact.js",
         "/snowpack/pkg/preact/devtools.js",
         "/snowpack/pkg/preact/hooks.js",
         "/static/App.js",
         "/static/index.js",
-        "/static/style/main.css.proxy.js"
+        "/static/style/index.css.proxy.js"
       ]
     }
   },
