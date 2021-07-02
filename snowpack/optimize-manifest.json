@@ -2,25 +2,25 @@
   "imports": {
     "/index.html": {
       "entry": [
-        "/static/index.kJtdq9b96HpM.js"
+        "/static/index.js"
       ],
       "css": [
-        "/favicon.JZ3mPBBLm80T.png",
-        "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap",
+        "/favicon.png",
+        "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&amp;display=swap",
         "https://fonts.gstatic.com"
       ],
       "js": [
-        "/snowpack/pkg/common/preact.module-06e62caf.nz2wWDitA5vL.js",
-        "/snowpack/pkg/preact.4a4HLwesNmKU.js",
-        "/snowpack/pkg/preact/devtools.Abd_q8dJf4rR.js",
-        "/snowpack/pkg/preact/hooks.mhyMt11YgrXZ.js",
-        "/static/App.2XUQuz2TirS1.js",
-        "/static/index.kJtdq9b96HpM.js",
-        "/static/style/main.NkMNderE1HV_.css.proxy.js"
+        "/snowpack/pkg/common/preact.module-b61d5fee.js",
+        "/snowpack/pkg/preact.js",
+        "/snowpack/pkg/preact/devtools.js",
+        "/snowpack/pkg/preact/hooks.js",
+        "/static/App.js",
+        "/static/index.js",
+        "/static/style/main.css.proxy.js"
       ]
     }
   },
   "generated": {
-    "preloadedCSS": "/imported-styles.css"
+    "preloadedCSS": "/style.css"
   }
 }

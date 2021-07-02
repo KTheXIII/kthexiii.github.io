@@ -1,1 +1,0 @@
-import{n as o,y as t,p as e}from"../common/preact.module-06e62caf.nz2wWDitA5vL.js";function a(n,_){return o.__a&&o.__a(_),n}typeof window!="undefined"&&window.__PREACT_DEVTOOLS__&&window.__PREACT_DEVTOOLS__.attachPreact("10.5.13",o,{Fragment:t,Component:e});export{a as addHookName};
