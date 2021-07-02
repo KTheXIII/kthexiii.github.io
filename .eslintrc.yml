@@ -1,4 +1,5 @@
 env:
+  node: true
   browser: true
   es2021: true
 extends:
@@ -25,6 +26,7 @@ rules:
     - warn
     - vars: all
       args: none
+      varsIgnorePattern: h
   '@typescript-eslint/no-empty-function':
     - error
   no-unused-vars:
@@ -33,6 +35,7 @@ rules:
       args: none
       ignoreRestSiblings: false
       caughtErrors: none
+      varsIgnorePattern: h
   semi:
     - error
     - never

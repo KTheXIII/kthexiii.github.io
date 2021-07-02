@@ -6,11 +6,11 @@ export const App: FunctionalComponent = () => {
   let timeoutID: number
 
   useEffect(() => {
-    if(!timeoutID)
+    if (!timeoutID)
       timeoutID = setTimeout(() => {
         helloRef.current?.classList.remove('invisible')
         helloRef.current?.classList.add('animation-500ms-ease-out')
-      }, 250);
+      }, 250)
   }, [helloRef])
 
   return (

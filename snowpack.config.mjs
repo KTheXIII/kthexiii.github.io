@@ -1,41 +1,51 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
+  env: {
+    VERSION: process.env.npm_package_version,
+    AUTHOR: process.env.npm_config_init_author_name,
+    DESCRIPTION: process.env.npm_package_description,
+    HOMEPAGE: process.env.npm_package_homepage,
+    REPOSITORY_URL: process.env.npm_package_repository_url,
+    COMMIT_HASH: process.env.GITHUB_SHA || 'development',
+  },
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/static' }
+    src: { url: '/static' },
   },
   plugins: [
-    [
-      'snowpack-plugin-hash',
-    ],
-    '@snowpack/plugin-sass',
-    '@prefresh/snowpack', 
-    [
-      '@snowpack/plugin-optimize',
-      {
-        'preloadCSS': true
-      }
-    ],
+    '@prefresh/snowpack',
     '@snowpack/plugin-dotenv',
-    [
-      '@snowpack/plugin-typescript',
+    ['@snowpack/plugin-sass', { compilerOptions: { style: 'compressed' } }],
+    ['@snowpack/plugin-typescript'],
+    ['@snowpack/plugin-run-script',
+      {
+        cmd: 'eslint src --ext .js,.jsx,.ts,.tsx',
+        watch: 'esw -w --clear src --ext .js,.jsx,.ts,.tsx'
+      },
+    ],
+    ['@snowpack/plugin-optimize',
+      {
+        'preloadCSS': true,
+        'preloadCSSFileName': (process.env.PUBLIC_URL || '/') + 'style.css'
+      }
     ],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
-    // { "match": "routes", "src": ".*", "dest": "/index.html" },
+    // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": process.env.GITHUB_IO || false
+    splitting: true,
+    treeshake: true,
   },
   packageOptions: {
-    /* ... */
   },
   devOptions: {
-    /* ... */
+    open: 'none'
   },
   buildOptions: {
-    metaUrlPath: 'snowpack' // change _snowpack directory to snowpack
+    cacheDirPath: './.cache/snowpack',
+    metaUrlPath: 'snowpack', // Fix for github pages
+    baseUrl: process.env.PUBLIC_URL || '/'
   },
-};
+}
