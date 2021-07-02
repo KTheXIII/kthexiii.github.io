@@ -1,17 +1,18 @@
-import { h, FunctionalComponent } from 'preact'
+import { h, FunctionalComponent as Func } from 'preact'
 import { useEffect, useRef } from 'preact/hooks'
 
-export const App: FunctionalComponent = () => {
-  const helloRef = useRef<HTMLHeadingElement | null>(null)
-  let timeoutID: number
+export const App: Func = () => {
+  const helloRef = useRef<HTMLHeadingElement>(null)
 
   useEffect(() => {
-    if (!timeoutID)
-      timeoutID = setTimeout(() => {
-        helloRef.current?.classList.remove('invisible')
-        helloRef.current?.classList.add('animation-500ms-ease-out')
-      }, 250)
-  }, [helloRef])
+    const timeout = setTimeout(() => {
+      helloRef.current?.classList.remove('invisible')
+      helloRef.current?.classList.add('animation-500ms-ease-out')
+    }, 250)
+    return () => {
+      clearTimeout(timeout)
+    }
+  }, [])
 
   return (
     <div className="app">

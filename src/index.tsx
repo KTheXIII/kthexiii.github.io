@@ -1,7 +1,7 @@
 import 'preact/devtools'
-import { render, h } from 'preact'
+import { h, render } from 'preact'
 
-import './style/main.scss'
+import './style/index.scss'
 
 import { App } from './App'
 
