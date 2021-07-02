@@ -6,6 +6,9 @@
       ],
       "css": [
         "/favicon.png",
+        "/logo192.png",
+        "/logo512.png",
+        "/manifest.json",
         "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&amp;display=swap",
         "https://fonts.gstatic.com"
       ],
