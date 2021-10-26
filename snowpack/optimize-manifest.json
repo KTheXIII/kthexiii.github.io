@@ -6,24 +6,23 @@
       ],
       "css": [
         "/favicon.png",
-        "/logo192.png",
+        "/index.css",
         "/logo512.png",
         "/manifest.json",
-        "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&amp;display=swap",
+        "https://fonts.googleapis.com",
+        "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&amp;family=Roboto:wght@100;300;400&amp;display=swap",
         "https://fonts.gstatic.com"
       ],
       "js": [
-        "/snowpack/pkg/common/preact.module-a71fe08d.js",
+        "/snowpack/pkg/common/preact.module-d423f0e6.js",
         "/snowpack/pkg/preact.js",
         "/snowpack/pkg/preact/devtools.js",
         "/snowpack/pkg/preact/hooks.js",
+        "/static/app.css.proxy.js",
         "/static/App.js",
-        "/static/index.js",
-        "/static/style/index.css.proxy.js"
+        "/static/index.js"
       ]
     }
   },
-  "generated": {
-    "preloadedCSS": "/style.css"
-  }
+  "generated": {}
 }

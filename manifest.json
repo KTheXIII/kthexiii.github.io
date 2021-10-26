@@ -26,6 +26,6 @@
       "sizes": "512x512"
     }
   ],
-  "theme_color": "#101010",
+  "theme_color": "currentcolor",
   "background_color": "#101010"
 }
