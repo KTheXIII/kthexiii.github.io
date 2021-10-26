@@ -1,0 +1,26 @@
+.auto-theme {
+  --bg-0: #0f0f0f;
+  --text-0: #fafafa;
+}
+
+:root {
+  font-size: 11pt;
+}
+
+html,
+body,
+#root {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: var(--bg-0);
+  color: var(--text-0);
+  
+  height: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  .auto-theme {
+    --bg-0: #fafafa;
+    --text-0: #0f0f0f;
+  }
+}

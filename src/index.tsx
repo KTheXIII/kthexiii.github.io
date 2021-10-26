@@ -1,8 +1,6 @@
 import 'preact/devtools'
 import { h, render } from 'preact'
 
-import './style/index.scss'
-
 import { App } from './App'
 
 async function main() {

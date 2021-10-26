@@ -5,23 +5,24 @@ Build with Snowpack, Preact and TypeScript.
 ## Requirements
 
 - [nodejs](https://nodejs.org/)
+- [pnpm]()
 
 ## Development
 
 Installs the packages
 
 ```
-yarn
+pnpm i
 ```
 
 Run development server
 
 ```
-yarn start
+pnpm dev
 ```
 
 Build production
 
 ```
-yarn build
+pnpm build
 ```

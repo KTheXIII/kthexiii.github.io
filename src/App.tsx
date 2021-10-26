@@ -1,13 +1,13 @@
 import { h, FunctionalComponent as Func } from 'preact'
-import { useEffect, useRef } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
+
+import './app.css'
 
 export const App: Func = () => {
-  const helloRef = useRef<HTMLHeadingElement>(null)
-
+  const [css, setCSS] = useState('opacity-0')
   useEffect(() => {
     const timeout = setTimeout(() => {
-      helloRef.current?.classList.remove('invisible')
-      helloRef.current?.classList.add('animation-500ms-ease-out')
+      setCSS('opacity-100')
     }, 250)
     return () => {
       clearTimeout(timeout)
@@ -15,8 +15,12 @@ export const App: Func = () => {
   }, [])
 
   return (
-    <div className="app">
-      <h1 ref={helloRef} className="invisible">I'm here.</h1>
+    <div className="app flex h-full">
+      <h1 className={`m-auto font-mono text-3xl font-light
+        ${css} transition-opacity duration-500 ease-out`}
+      >
+      I'm here.
+      </h1>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-name: Deploy Github Pages
+name: Deploy to Github Pages
 
 on:
   push:
@@ -17,12 +17,25 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn --frozen-lockfile
-      - run: yarn test
-      - run: yarn build
+
+      - name: Install dependencies
+        run: |
+          npm i -g pnpm
+          pnpm i --frozen-lockfile
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build
+        run: |
+          pnpm clean
+          pnpm build
+          touch build/.nojekyll
+        env:
+          PUBLIC_URL: './'
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.

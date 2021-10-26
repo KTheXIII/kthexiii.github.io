@@ -1,21 +1,29 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
   env: {
+    APP_NAME: process.env.npm_package_name,
     VERSION: process.env.npm_package_version,
     AUTHOR: process.env.npm_config_init_author_name,
     DESCRIPTION: process.env.npm_package_description,
     HOMEPAGE: process.env.npm_package_homepage,
-    REPOSITORY_URL: process.env.npm_package_repository_url,
+    REPOSITORY_URL: process.env.npm_package_repository,
     COMMIT_HASH: process.env.GITHUB_SHA || 'development',
+    PUBLIC_URL: process.env.PUBLIC_URL || '/'
+  },
+  alias: {
+    '@assets': './src/assets',
+    '@components': './src/components',
+    '@pages': './src/pages',
+    '@models': './src/models',
+    '@scripts': './src/scripts',
   },
   mount: {
-    public: { url: '/', static: true },
+    public: { url: '/', static: true, resolve: true },
     src: { url: '/static' },
   },
   plugins: [
     '@prefresh/snowpack',
     '@snowpack/plugin-dotenv',
-    ['@snowpack/plugin-sass', { compilerOptions: { style: 'compressed' } }],
     ['@snowpack/plugin-typescript'],
     ['@snowpack/plugin-run-script',
       {
@@ -25,10 +33,10 @@ export default {
     ],
     ['@snowpack/plugin-optimize',
       {
-        'preloadCSS': true,
-        'preloadCSSFileName': (process.env.PUBLIC_URL || '/') + 'style.css'
+        preloadCSS: false,
       }
     ],
+    '@snowpack/plugin-postcss',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -41,7 +49,8 @@ export default {
   packageOptions: {
   },
   devOptions: {
-    open: 'none'
+    open: 'none',
+    tailwindConfig: './tailwind.config.js',
   },
   buildOptions: {
     cacheDirPath: './.cache/snowpack',
