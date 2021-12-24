@@ -6,23 +6,27 @@
       ],
       "css": [
         "/favicon.png",
-        "/index.css",
-        "/logo512.png",
         "/manifest.json",
+        "https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css",
         "https://fonts.googleapis.com",
         "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&amp;family=Roboto:wght@100;300;400&amp;display=swap",
         "https://fonts.gstatic.com"
       ],
       "js": [
-        "/snowpack/pkg/common/preact.module-d423f0e6.js",
-        "/snowpack/pkg/preact.js",
-        "/snowpack/pkg/preact/devtools.js",
-        "/snowpack/pkg/preact/hooks.js",
+        "/snowpack/env.js",
+        "/snowpack/pkg/common/index-9319bb84.js",
+        "/snowpack/pkg/react-dom.js",
+        "/snowpack/pkg/react.js",
+        "/snowpack/pkg/three.js",
         "/static/app.css.proxy.js",
         "/static/App.js",
-        "/static/index.js"
+        "/static/index.js",
+        "/static/scripts/env.js",
+        "/static/scripts/rho.js"
       ]
     }
   },
-  "generated": {}
+  "generated": {
+    "preloadedCSS": "/style.css"
+  }
 }
