@@ -7,5 +7,15 @@ module.exports = {
     /^utm_/,
     /^fbclid$/
   ],
-  swDest: 'build/service-worker.js'
+  swDest: 'build/service-worker.js',
+  runtimeCaching: [
+    {
+      urlPattern: /\.(css)$/,
+      handler: 'CacheFirst',
+    },
+    {
+      urlPattern: /\.(png|jpg|jpeg|svg|gif)$/,
+      handler: 'CacheFirst',
+    }
+  ]
 }

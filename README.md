@@ -1,6 +1,6 @@
 # Personal Website
 
-Build with Snowpack, Preact and TypeScript.
+Build with Snowpack, React and TypeScript.
 
 ## Requirements
 

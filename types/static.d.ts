@@ -55,6 +55,18 @@ declare module '*.png' {
   const ref: string
   export default ref
 }
+declare module '*.obj' {
+  const ref: string
+  export default ref
+}
+declare module '*.vert' {
+  const ref: string
+  export default ref
+}
+declare module '*.frag' {
+  const ref: string
+  export default ref
+}
 
 // snowpack environment variables type definition
 declare const __SNOWPACK_ENV__ : {
