@@ -8,7 +8,8 @@ export const MODE           = __SNOWPACK_ENV__.MODE
 export const PUBLIC_URL     = __SNOWPACK_ENV__.PUBLIC_URL
 export const HOMEPAGE       = __SNOWPACK_ENV__.HOMEPAGE
 
-export function GetPlatform(): string {
+export type TPlatform = 'macOS' | 'Windows' | 'Linux' | 'Unknwon'
+export function GetPlatform(): TPlatform {
   const userAgent = navigator.userAgent
   if (userAgent.indexOf('Macintosh') !== -1)
     return 'macOS'
@@ -16,7 +17,6 @@ export function GetPlatform(): string {
     return 'Windows'
   if (userAgent.indexOf('Linux') !== -1)
     return 'Linux'
-
   return 'Unknwon'
 }
 

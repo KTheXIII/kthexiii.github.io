@@ -1,4 +1,24 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
+
+const plugins = [
+  '@snowpack/plugin-react-refresh',
+  '@snowpack/plugin-dotenv',
+  ['@snowpack/plugin-typescript'],
+  ['@snowpack/plugin-run-script',
+    {
+      cmd: 'eslint src --ext .js,.jsx,.ts,.tsx',
+      watch: 'esw -w --clear src --ext .js,.jsx,.ts,.tsx'
+    },
+  ],
+  '@snowpack/plugin-postcss',
+  ['@snowpack/plugin-optimize',
+    {
+      preloadCSS: true,
+      preloadCSSFileName: `${process.env.PUBLIC_URL || '/'}style.css`
+    }
+  ],
+]
+
 export default {
   env: {
     APP_NAME: process.env.npm_package_name,
@@ -6,9 +26,11 @@ export default {
     AUTHOR: process.env.npm_config_init_author_name,
     DESCRIPTION: process.env.npm_package_description,
     HOMEPAGE: process.env.npm_package_homepage,
-    REPOSITORY_URL: process.env.npm_package_repository,
+    REPOSITORY_URL: process.env.npm_package_repository_url,
     COMMIT_HASH: process.env.GITHUB_SHA || 'development',
-    PUBLIC_URL: process.env.PUBLIC_URL || '/'
+    PUBLIC_URL: process.env.PUBLIC_URL || '/',
+    SPONSOR_URL: process.env.npm_package_funding_url,
+    BUILD_DATE: new Date().toISOString(),
   },
   alias: {
     '@assets': './src/assets',
@@ -16,29 +38,13 @@ export default {
     '@pages': './src/pages',
     '@models': './src/models',
     '@scripts': './src/scripts',
+    '@shaders': './src/shaders',
   },
   mount: {
     public: { url: '/', static: true, resolve: true },
     src: { url: '/static' },
   },
-  plugins: [
-    '@snowpack/plugin-react-refresh',
-    '@snowpack/plugin-dotenv',
-    ['@snowpack/plugin-typescript'],
-    ['@snowpack/plugin-run-script',
-      {
-        cmd: 'eslint src --ext .js,.jsx,.ts,.tsx',
-        watch: 'esw -w --clear src --ext .js,.jsx,.ts,.tsx'
-      },
-    ],
-    '@snowpack/plugin-postcss',
-    ['@snowpack/plugin-optimize',
-      {
-        preloadCSS: true,
-        preloadCSSFileName: (process.env.PUBLIC_URL || '/') + 'style.css'
-      }
-    ],
-  ],
+  plugins: plugins,
   routes: [
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
