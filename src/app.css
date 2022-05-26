@@ -18,7 +18,7 @@
 }
 
 .auto-theme {
-  --black: #2b2d3a;
+  --black: #262834;
   --gray: #8a8ea8;
   --red: #fb617e;
   --yellow: #edc763;
@@ -34,7 +34,7 @@ body,
 #root {
   font-family: "Roboto", sans-serif;
   margin: 0;
-  background-color: #0b0b0b;
+  background-color: var(--black);
   color: var(--white);
 
   overflow: hidden;

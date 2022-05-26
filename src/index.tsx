@@ -1,37 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React, { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 
-import { App } from './App'
-import {
-  MODE,
-  PUBLIC_URL,
-  VERSION,
-  COMMIT_HASH,
-  REPOSITORY_URL
-} from '@scripts/env'
-
-if ('serviceWorker' in navigator && MODE === 'production') {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register(`${PUBLIC_URL || '/'}service-worker.js`)
-      .then(reg => console.log(`Registered Service Worker: ${reg.scope}`))
-      .catch(err => console.error(err))
-  })
-}
+import App from './App'
 
 async function main() {
-  console.log(`v${VERSION}-${COMMIT_HASH.slice(0, 7)}`)
-  console.log(`bug report: ${REPOSITORY_URL}/issues`)
-
-  ReactDOM.render(
-    <React.StrictMode>
+  const container = document.querySelector('#root')
+  if (!container) throw new Error('No #root container!')
+  const root = createRoot(container)
+  root.render(
+    <StrictMode>
       <App />
-    </React.StrictMode>,
-    document.querySelector('#root')
+    </StrictMode>,
   )
 }
 
 window.onload = main
-
-// Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
-// Learn more: https://snowpack.dev/concepts/hot-module-replacement
-if (import.meta.hot) import.meta.hot.accept()
