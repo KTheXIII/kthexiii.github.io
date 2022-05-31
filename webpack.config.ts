@@ -60,12 +60,12 @@ export default {
       }
     }),
     new HTMLPlugin({
-      title: env.APP_NAME,
-      author: env.AUTHOR,
+      title:       env.APP_NAME,
+      author:      env.AUTHOR,
       description: env.DESCRIPTION,
 
       template: path.resolve(__dirname, 'public/index.html'),
-      favicon: path.resolve(__dirname, 'public/favicon.png'),
+      favicon:  path.resolve(__dirname, 'public/favicon.png'),
       manifest: path.resolve(__dirname, 'public/manifest.json'),
       chunks: ['app'],
       inject: 'body'
