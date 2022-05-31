@@ -68,8 +68,8 @@ declare module '*.frag' {
   export default ref
 }
 
-// snowpack environment variables type definition
-declare const __SNOWPACK_ENV__ : {
+declare const __ENV__ : {
+  MODE: string
   APP_NAME: string
   VERSION: string
   AUTHOR: string
@@ -77,9 +77,8 @@ declare const __SNOWPACK_ENV__ : {
   HOMEPAGE: string
   REPOSITORY_URL: string
   COMMIT_HASH: string
-
   PUBLIC_URL: string
-  MODE: string,
-  MODE_ENV: string
-  SSR: boolean
+
+  SPONSOR_URL: string
+  BUILD_DATE: string
 }

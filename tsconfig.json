@@ -1,14 +1,18 @@
 {
   "include": ["src", "types"],
-  "exclude": ["build", ".cache"],
+  "exclude": ["build"],
   "compilerOptions": {
     "outDir": "./build",
     "noImplicitAny": true,
-    "module": "ES6",
-    "target": "ES5",
+    "module": "ESNext",
+    "target": "ES6",
     "jsx": "react",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@scripts/*": ["./src/scripts/*"],
+    }
   }
 }
