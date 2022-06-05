@@ -28,15 +28,14 @@ jobs:
         run: |
           yarn clean
           yarn build
-          yarn post:build
-          touch build/.nojekyll
-        env:
-          PUBLIC_URL: './'
+          touch dist/.nojekyll
+        # env:
+        #   PUBLIC_URL: './'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build    # The folder the action should deploy.
+          FOLDER: dist     # The folder the action should deploy.
           CLEAN: true      # Automatically remove deleted files from the deploy branch

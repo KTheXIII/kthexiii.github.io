@@ -1,21 +1,23 @@
 # Personal Website
 
-Build with webpack, React and TypeScript.
+Build with [vite](https://vitejs.dev), [ReactJS](https://reactjs.org) and [tailwindcss](https://tailwindcss.com)!
 
 ## Requirements
 
-- [nodejs](https://nodejs.org/)
+  - [NodeJS](https://nodejs.dev)
 
 ## Development
 
-Installs the packages
-
-```
-yarn
-```
-
-Run development server
+Start development server
 
 ```
 yarn dev
+```
+
+## Build
+
+Build the output for publishing, the output will be `dist`.
+
+```
+yarn build
 ```
