@@ -5,13 +5,14 @@ Build with [vite](https://vitejs.dev), [ReactJS](https://reactjs.org) and [tailw
 ## Requirements
 
   - [NodeJS](https://nodejs.dev)
+  - [pnpm](https://pnpm.io)
 
 ## Development
 
 Start development server
 
 ```
-yarn dev
+pnpm dev
 ```
 
 ## Build
@@ -19,5 +20,5 @@ yarn dev
 Build the output for publishing, the output will be `dist`.
 
 ```
-yarn build
+pnpm build
 ```

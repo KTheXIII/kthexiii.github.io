@@ -17,20 +17,18 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      # pnpm does not comes default
+      - name: install pnpm
+        run: npm i -g pnpm
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
-
-      # - name: Run tests
-      #   run: yarn test
+        run: pnpm i --frozen-lockfile
 
       - name: Build
         run: |
-          yarn clean
-          yarn build
+          pnpm clean
+          pnpm build
           touch dist/.nojekyll
-        # env:
-        #   PUBLIC_URL: './'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
