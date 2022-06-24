@@ -10,6 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+        pnpm-version: [latest]
 
     steps:
       - uses: actions/checkout@v2
@@ -17,9 +18,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      # pnpm does not comes default
-      - name: install pnpm
-        run: npm i -g pnpm
+
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: ${{ matrix.pnpm-version }}
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
